@@ -4,6 +4,7 @@
  
 int main()
 {
+    system("chcp 65001");
     char inputMenu[100];
     int pilihan;
     int gagalLogin = 0;

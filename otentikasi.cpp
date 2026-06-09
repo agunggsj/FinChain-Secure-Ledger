@@ -2,6 +2,21 @@
 #include <iostream>
 #include <cstring>
 #include <iomanip>
+
+#define RESET       "\033[0m"
+#define BOLD        "\033[1m"
+#define RED         "\033[31m"
+#define GREEN       "\033[32m"
+#define YELLOW      "\033[33m"
+#define BLUE        "\033[34m"
+#define MAGENTA     "\033[35m"
+#define CYAN        "\033[36m"
+#define WHITE       "\033[37m"
+#define BG_GREEN    "\033[42m"
+#define BG_YELLOW   "\033[43m"
+#define BG_RED      "\033[41m"
+#define BG_BLUE     "\033[44m"
+#define BG_CYAN     "\033[46m"
  
 User users[50];
 int jumlahUser = 0;
@@ -22,26 +37,20 @@ void pauseProgram() {
 }
 
 void Banner() {
-    const std::string merah = "\033[41m";
-    const std::string reset = "\033[0m"; 
-    int pola[5][38] = {
-        //  F         I           N           C         H          A        I         N
-        {1,1,1,0, 1,1,1,0,  1,1,0,0,1,0,  1,1,1,1, 0,1,0,0,1,0, 1,1,1,0, 1,1,1,0, 1,1,0,0,1}, // Baris 1
-        {1,0,0,0, 0,1,0,0,  1,1,0,0,1,0,  1,0,0,0, 0,1,0,0,1,0, 1,0,1,0, 0,1,0,0, 1,1,0,0,1}, // Baris 2
-        {1,1,1,0, 0,1,0,0,  1,0,1,0,1,0,  1,0,0,0, 0,1,1,1,1,0, 1,1,1,0, 0,1,0,0, 1,0,1,0,1}, // Baris 3
-        {1,0,0,0, 0,1,0,0,  1,0,0,1,1,0,  1,0,0,0, 0,1,0,0,1,0, 1,0,1,0, 0,1,0,0, 1,0,0,1,1}, // Baris 4
-        {1,0,0,0, 1,1,1,0,  1,0,0,1,1,0,  1,1,1,1, 0,1,0,0,1,0, 1,0,1,0, 1,1,1,0, 1,0,0,1,1}  // Baris 5
-    };
-    for (int i = 0; i < 5; i++) {
-        for (int j = 0; j < 38; j++) {
-            if (pola[i][j] == 1) {
-                std::cout << merah << "  " << reset; 
-            } else {
-                std::cout << "  ";             
-            }
-        }
-        std::cout << std::endl; 
-    }
+    clearScreen();
+    std::cout << CYAN << BOLD;
+    std::cout << "\n";
+    std::cout << "  ███████╗██╗███╗   ██╗ ██████╗██╗  ██╗ █████╗ ██╗███╗   ██╗\n";
+    std::cout << "  ██╔════╝██║████╗  ██║██╔════╝██║  ██║██╔══██╗██║████╗  ██║\n";
+    std::cout << "  █████╗  ██║██╔██╗ ██║██║     ███████║███████║██║██╔██╗ ██║\n";
+    std::cout << "  ██╔══╝  ██║██║╚██╗██║██║     ██╔══██║██╔══██║██║██║╚██╗██║\n";
+    std::cout << "  ██║     ██║██║ ╚████║╚██████╗██║  ██║██║  ██║██║██║ ╚████║\n";
+    std::cout << "  ╚═╝     ╚═╝╚═╝  ╚═══╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝\n";
+    std::cout << RESET;
+    std::cout << YELLOW << BOLD;
+    std::cout << "        Secure Ledger — Sistem Manajemen Keuangan Pribadi\n";
+    std::cout << "        Powered by Blockchain-inspired Hash Chain\n" << RESET;
+    std::cout << CYAN << "  ──────────────────────────────────────────────────────────\n" << RESET;
 }
  
 void signUp()
