@@ -10,6 +10,7 @@ int main()
     do
     {
         clearScreen();
+        Banner();
         std::cout << "\n=========================\n";
         std::cout << " FINCHAIN SECURE LEDGER\n";
         std::cout << "=========================\n";

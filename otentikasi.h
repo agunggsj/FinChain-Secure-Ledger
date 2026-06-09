@@ -15,5 +15,6 @@ void clearScreen();
 void pauseProgram();
 void signUp();
 bool signIn(); 
+void Banner();
  
 #endif
