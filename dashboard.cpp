@@ -74,5 +74,6 @@ void PersonalDashboard(){
                 std::system("cls");
         }
     } while (pilihan != 'A' && pilihan != 'B' && pilihan != 'C' && pilihan != 'D' && pilihan != 'E' && pilihan != 'F');
+}
 
 
