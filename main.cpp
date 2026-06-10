@@ -12,15 +12,25 @@ int main()
     {
         clearScreen();
         Banner();
-        std::cout << "\n=========================\n";
-        std::cout << " FINCHAIN SECURE LEDGER\n";
-        std::cout << "=========================\n";
-        std::cout << "1. Sign Up\n";
-        std::cout << "2. Sign In\n";
-        std::cout << "3. Exit\n";
-        std::cout << "\nPilih : ";
+        std::cout << "  ==========================================================\n";
+        std::cout << "  |                 FINCHAIN SECURE LEDGER                 |\n";
+        std::cout << "  ==========================================================\n";
+        std::cout << "  |                                                        |\n";
+        std::cout << "  |               ==========================               |\n";
+        std::cout << "  |               |      1. Sign Up        |               |\n";
+        std::cout << "  |               ==========================               |\n";
+        std::cout << "  |                                                        |\n";
+        std::cout << "  |               ==========================               |\n";
+        std::cout << "  |               |      2. Sign In        |               |\n";
+        std::cout << "  |               ==========================               |\n";
+        std::cout << "  |                                                        |\n";
+        std::cout << "  |               ==========================               |\n";
+        std::cout << "  |               |       3. Exit          |               |\n";
+        std::cout << "  |               ==========================               |\n";
+        std::cout << "  |                                                        |\n";
+        std::cout << "  ==========================================================\n";
+        std::cout << "  Pilih : ";
         std::cin >> inputMenu;
- 
         if (inputMenu[1] != '\0')
         {
             cleanBuffer();

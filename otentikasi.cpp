@@ -78,6 +78,10 @@ void signUp()
     std::cout << "Password: ";
     std::cin >> std::setw(30) >> users[jumlahUser].password;
     cleanBuffer();
+    if (strlen(users[jumlahUser].password) < 4) {
+        std::cout << "Password minimal 4 karakter!" << std::endl;
+        return;
+    }
 
     jumlahUser++;
     std::cout << std::endl << "Registrasi berhasil!" << std::endl;
